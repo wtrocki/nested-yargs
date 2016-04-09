@@ -30,6 +30,10 @@ Cli.createCommand = function (name, description, options) {
     return new Command(name, description, options);
 };
 
+Cli.parse = function(args) {
+  return Yargs.parse(args);
+};
+
 Cli.run = function (command, yargs) {
     return  command.run(yargs || Yargs);
 };
